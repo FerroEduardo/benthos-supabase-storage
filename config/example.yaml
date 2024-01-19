@@ -1,0 +1,17 @@
+input:
+  stdin:
+    codec: lines
+
+pipeline:
+  threads: 1
+  processors:
+  - mapping: |
+      root.data = content()
+      root.filename = "test.txt"
+      root.contentType = "text/plain"
+
+output:
+  supabase_storage:
+    bucket: lotus
+    baseUrl: http://localhost:8000/storage/v1
+    token: SUPABASE_API_TOKEN

@@ -1,4 +1,4 @@
-module github.com/benthosdev/benthos-plugin-example
+module github.com/FerroEduardo/benthos-supabase-storage
 
 go 1.18
 
